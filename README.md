@@ -1,9 +1,5 @@
 # Assignment 1 — Introduction to Machine Learning (Formative I)
 
-- **Author:** Your Name(s)
-- **Notebook:** [Assignment1_GaddielIrakoze.ipynb](Assignment1_GaddielIrakoze.ipynb)
-- **Instructions:** [Formative1_instructions.txt](Formative1_instructions.txt)
-
 ## Overview
 
 This repository contains the deliverables for Formative I: a single Google Colab notebook that compares classical machine learning classifiers with a three-layer neural network implemented from scratch using NumPy. The goal is to demonstrate understanding of both perspectives, report experiments, and provide clear documentation and interpretation.
