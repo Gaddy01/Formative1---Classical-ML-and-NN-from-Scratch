@@ -18,7 +18,6 @@
 Files and important artifacts
 
 - `Assignment1_GaddielIrakoze.ipynb` — Main deliverable. Please open in Google Colab for best reproducibility.
-- `Formative1_instructions.txt` — Assignment brief and rubric.
 - `data/wine_fraud.csv` — Dataset used (cite information and source in the notebook). If a different dataset is selected, the notebook states its source and reasoning.
 
 How to run (recommended)
@@ -40,21 +39,9 @@ Grading checklist (where the rubric maps to evidence)
 - **Evaluation & Comparative Analysis:** A results table compares models on accuracy, precision, recall and F1-score; confusion matrices and learning curves are included. The Discussion interprets differences and connects results to bias/variance considerations.
 - **Academic integrity:** Dataset sources and any adapted code or references are cited in the References section.
 
-Notes for the grader
-
-- If any cell fails due to external package availability, please re-run the first cell to install dependencies (Colab will prompt if needed).
-- All random seeds are set for reproducibility; however, training nondeterminism in certain environments can cause minor numeric differences.
-
-Contact
-
-- If you need clarification on experiments or reproducibility, contact the author via the course messaging system.
-
 References
 
 - Assignment brief: `Formative1_instructions.txt`
 - scikit-learn documentation: https://scikit-learn.org/stable/
 
----
-
-If you want, I can now: scaffold the notebook with clear section headers and starter cells, or generate a short `requirements.txt` matching the notebook. Which should I do next?
 
