@@ -1,64 +1,60 @@
+
 # Assignment 1 — Introduction to Machine Learning (Formative I)
 
-## Overview
+- **Student:** Gaddiel Irakoze
+- **Notebook:** [Assignment1_GaddielIrakoze.ipynb](Assignment1_GaddielIrakoze.ipynb)
 
-This repository contains the deliverables for Formative I: a single Google Colab notebook that compares classical machine learning classifiers with a three-layer neural network implemented from scratch using NumPy. The goal is to demonstrate understanding of both perspectives, report experiments, and provide clear documentation and interpretation.
+**Purpose (for the grader)**
 
-## Included Files
+- This notebook compares two perspectives on supervised classification: (1) classical machine learning models implemented using scikit-learn, and (2) a three-layer feed-forward neural network implemented from first principles using NumPy. The notebook is written as a concise technical report so the grader can validate methodology, experiments, and conclusions.
 
-- [Assignment1_GaddielIrakoze.ipynb](Assignment1_GaddielIrakoze.ipynb) — Main notebook (runs end-to-end in Colab).
-- [Formative1_instructions.txt](Formative1_instructions.txt) — Assignment brief and rubric.
-- [data/wine_fraud.csv](data/wine_fraud.csv) — Dataset included for this assignment (replace or cite alternate dataset if you choose a different one).
+**What to look for (quick map)**
 
-## Notebook Structure
+- **Dataset & preprocessing:** dataset choice, motivation, cleaning, feature engineering, and train/validation split are grouped under the Introduction / Data section near the top of the notebook.
+- **Classical models:** implementations, hyperparameter variants, and evaluation (accuracy, precision, recall, F1, confusion matrices) are in the Classical Models section.
+- **Neural network from scratch:** architecture, activation functions, loss, vectorized forward/backward passes, training loop (SGD/batch GD), learning curves, and experiments appear in the Neural Network section.
+- **Comparison & discussion:** consolidated results table, confusion matrices, and a short analytical discussion (strengths, weaknesses, and reasons for performance differences) are in the final Results & Discussion section.
 
-The notebook is organized to read like a short technical report with the following sections:
+Files and important artifacts
 
-1. **Introduction & Dataset selection** — dataset description, justification, preprocessing and train/validation split.
-2. **Classical ML models** — at least two classifiers (e.g., logistic regression, decision tree, SVM, random forest) with 2–3 hyperparameter variations each and evaluation (accuracy, precision, recall, F1, confusion matrix).
-3. **Neural network from scratch** — a 3-layer feed-forward network (Input → Hidden (ReLU) → Hidden (ReLU) → Output (Sigmoid/Softmax)), with forward propagation, backpropagation, training loop (SGD or batch GD), experiments varying learning rate / hidden units / epochs, and learning curves.
-4. **Comparison & Discussion** — results table comparing models, discussion of strengths/weaknesses, and possible reasons for performance differences.
-5. **References** — citations for dataset and algorithms.
+- `Assignment1_GaddielIrakoze.ipynb` — Main deliverable. Please open in Google Colab for best reproducibility.
+- `Formative1_instructions.txt` — Assignment brief and rubric.
+- `data/wine_fraud.csv` — Dataset used (cite information and source in the notebook). If a different dataset is selected, the notebook states its source and reasoning.
 
-## Requirements
+How to run (recommended)
 
-The notebook requires common Python data science libraries. Install locally or let Colab handle packages. Typical dependencies:
+1. Open `Assignment1_GaddielIrakoze.ipynb` in Google Colab.
+2. If prompted, install required packages by running the first code cell. Typical packages used are:
 
 ```bash
 pip install numpy pandas scikit-learn matplotlib seaborn
 ```
 
-If you use additional libraries, list them in the notebook prior to execution.
+3. Run the notebook from top to bottom. The notebook is organized to run end-to-end without manual edits; any random seeds are fixed for reproducibility.
 
-## How to run
+Grading checklist (where the rubric maps to evidence)
 
-- Open the notebook in Google Colab (recommended) or run locally in Jupyter.
-- If running locally, ensure the working directory is the repository root so the notebook can access `data/wine_fraud.csv`.
-- Run all cells top-to-bottom; the notebook is designed to run end-to-end without manual interruption.
+- **Notebook organization, documentation & citations:** The notebook is structured as Introduction → Data → Classical Models → Neural Network → Experiments → Results & Discussion → References. Each code block is preceded by an explanatory Markdown cell describing intent and interpretation.
+- **Classical Model Implementation & Experimentation:** At least two classifiers are trained with 2–3 hyperparameter variations; evaluation metrics and confusion matrices are reported for each experiment in the Classical Models section.
+- **Neural Network From Scratch:** A three-layer (input → hidden → hidden → output) network is implemented using NumPy. Forward and backward passes are vectorized; cross-entropy (or binary cross-entropy) loss is used; training is performed with SGD/batch GD. Learning curves (loss and accuracy) and experiments that vary learning rate / hidden units / epochs are included.
+- **Evaluation & Comparative Analysis:** A results table compares models on accuracy, precision, recall and F1-score; confusion matrices and learning curves are included. The Discussion interprets differences and connects results to bias/variance considerations.
+- **Academic integrity:** Dataset sources and any adapted code or references are cited in the References section.
 
-## Evaluation & Deliverables
+Notes for the grader
 
-- Produce evaluation metrics for each model: **Accuracy, Precision, Recall, F1-score, Confusion matrix**.
-- For the scratch neural network show: training loss and accuracy curves across epochs, confusion matrix, and at least 2–3 experiments varying hyperparameters.
-- Include a results comparison table and a short written discussion interpreting findings.
+- If any cell fails due to external package availability, please re-run the first cell to install dependencies (Colab will prompt if needed).
+- All random seeds are set for reproducibility; however, training nondeterminism in certain environments can cause minor numeric differences.
 
-## Submission
+Contact
 
-- Submit a single Google Colab notebook file named following the convention: `Assignment1_FirstnameLastname.ipynb`.
-- The notebook must include your name(s) in a top Markdown cell and run end-to-end without errors.
+- If you need clarification on experiments or reproducibility, contact the author via the course messaging system.
 
-## Rubric Highlights (what to focus on)
+References
 
-- Clear organization and academic-style explanations with citations (see rubric in [Formative1_instructions.txt](Formative1_instructions.txt)).
-- At least two classical models with hyperparameter variations and full metric reporting.
-- A working from-scratch 3-layer neural network with correct forward/backward passes and training curves.
-- A comparison table and insightful discussion linking results to model behavior.
-
-## References
-
-- Assignment brief: [Formative1_instructions.txt](Formative1_instructions.txt)
+- Assignment brief: `Formative1_instructions.txt`
 - scikit-learn documentation: https://scikit-learn.org/stable/
-- (If you use a dataset from UCI) UCI Machine Learning Repository: https://archive.ics.uci.edu/
 
-If you'd like, I can also scaffold the notebook sections, add a `requirements.txt`, or draft the initial Colab notebook cells. Which would you prefer next?
+---
+
+If you want, I can now: scaffold the notebook with clear section headers and starter cells, or generate a short `requirements.txt` matching the notebook. Which should I do next?
 
